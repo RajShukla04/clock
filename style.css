@@ -1,0 +1,26 @@
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=BenchNine:300,400');
+
+*, *:after, *:before{
+  @include box-sizing(border-box);
+}
+html{
+  background: #222;
+  overflow: hidden;
+font-family: 'BenchNine', sans-serif;
+}
+
+@mixin circle($s){
+  width: $s;
+  height: $s;
+  @include border-radius(50%);
+}
+@mixin center($z){
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: $z;
+}
